@@ -71,3 +71,62 @@ a {
   display: block;
   margin-bottom: 0.5rem;
 }
+.timeline {
+  position: relative;
+  margin-left: 20px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--accent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -1px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.timeline-content {
+  padding-left: 30px;
+}
+
+.timeline-content h4 {
+  margin: 0;
+}
+
+.timeline-content span {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.timeline-details {
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.timeline-item.active .timeline-details {
+  display: block;
+}
