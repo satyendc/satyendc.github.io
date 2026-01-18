@@ -1,9 +1,0 @@
-[
-  {
-    "title": "Real-time Analytics Pipeline",
-    "problem": "High-volume event processing with low latency",
-    "architecture": "Kafka + Python consumers + PostgreSQL",
-    "tradeoffs": "Operational complexity vs throughput",
-    "learning": "Distributed systems, partitioning, backpressure"
-  }
-]
