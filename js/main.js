@@ -1,5 +1,5 @@
-document.querySelectorAll(".toggle").forEach(btn => {
-  btn.addEventListener("click", () => {
-    btn.parentElement.classList.toggle("active");
+document.querySelectorAll(".top-contact a").forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    link.title = link.getAttribute("aria-label");
   });
 });
