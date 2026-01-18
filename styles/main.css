@@ -56,3 +56,18 @@ section {
 a {
   color: var(--accent);
 }
+.journey-item {
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.journey-item span {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.contact a {
+  display: block;
+  margin-bottom: 0.5rem;
+}
