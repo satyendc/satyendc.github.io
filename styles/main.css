@@ -1,76 +1,37 @@
-:root {
-  --bg-dark: #0b0f19;
-  --bg-light: #ffffff;
-  --text-dark: #e5e7eb;
-  --text-light: #111827;
-  --accent: #38bdf8;
-}
-
 body {
   margin: 0;
-  font-family: Inter, system-ui, sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-dark);
-}
-
-body[data-theme="light"] {
-  background: var(--bg-light);
-  color: var(--text-light);
-}
-
-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 3rem 1rem;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
+  text-align: center;
+  padding: 2rem;
+  background: #020617;
 }
 
-.hero h2 {
-  font-size: 2rem;
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 2.5rem 1rem;
 }
 
-.skill-group {
+h2 {
+  border-bottom: 2px solid #38bdf8;
+  display: inline-block;
   margin-bottom: 1rem;
 }
 
-.project-card {
-  border-left: 3px solid var(--accent);
-  padding: 1rem;
-  margin-bottom: 1rem;
+.list {
+  list-style: none;
+  padding: 0;
 }
 
-.collapsible {
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.hidden {
-  display: none;
-}
-
-a {
-  color: var(--accent);
-}
-.journey-item {
-  border-left: 2px solid var(--accent);
-  padding-left: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.journey-item span {
-  font-size: 0.9rem;
-  color: #94a3b8;
-}
-
-.contact a {
-  display: block;
+.list li {
   margin-bottom: 0.5rem;
 }
+
 .timeline {
   position: relative;
   margin-left: 20px;
@@ -79,54 +40,40 @@ a {
 .timeline::before {
   content: "";
   position: absolute;
-  left: 10px;
+  left: 0;
   top: 0;
   width: 2px;
   height: 100%;
-  background: var(--accent);
+  background: #38bdf8;
 }
 
 .timeline-item {
-  position: relative;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  padding-left: 20px;
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease;
 }
 
-.timeline-item.visible {
+.timeline-item.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-.timeline-dot {
-  position: absolute;
-  left: -1px;
-  top: 5px;
-  width: 14px;
-  height: 14px;
-  background: var(--accent);
-  border-radius: 50%;
+.year {
+  font-weight: bold;
+  color: #38bdf8;
 }
 
-.timeline-content {
-  padding-left: 30px;
-}
-
-.timeline-content h4 {
-  margin: 0;
-}
-
-.timeline-content span {
-  font-size: 0.85rem;
-  color: #94a3b8;
-}
-
-.timeline-details {
-  margin-top: 0.5rem;
-  display: none;
-}
-
-.timeline-item.active .timeline-details {
+.links a {
   display: block;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #020617;
 }
