@@ -4,19 +4,43 @@ async function loadJSON(path) {
 }
 
 /* JOURNEY */
+/* JOURNEY MAP WITH MOTION */
 loadJSON("data/journey.json").then(items => {
   const container = document.getElementById("journeyContainer");
 
   items.forEach(j => {
-    container.innerHTML += `
-      <div class="journey-item">
+    const div = document.createElement("div");
+    div.className = "timeline-item";
+
+    div.innerHTML = `
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
         <h4>${j.title}</h4>
         <span>${j.period}</span>
-        <p>${j.description}</p>
+        <div class="timeline-details">
+          <p>${j.description}</p>
+        </div>
       </div>
     `;
+
+    div.onclick = () => div.classList.toggle("active");
+    container.appendChild(div);
+  });
+
+  // Scroll animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll(".timeline-item").forEach(item => {
+    observer.observe(item);
   });
 });
+
 
 /* PROJECTS */
 loadJSON("data/projects.json").then(projects => {
