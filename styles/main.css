@@ -1,0 +1,58 @@
+:root {
+  --bg-dark: #0b0f19;
+  --bg-light: #ffffff;
+  --text-dark: #e5e7eb;
+  --text-light: #111827;
+  --accent: #38bdf8;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body[data-theme="light"] {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+}
+
+.skill-group {
+  margin-bottom: 1rem;
+}
+
+.project-card {
+  border-left: 3px solid var(--accent);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.collapsible {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  color: var(--accent);
+}
