@@ -1,30 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Satyen Chaudhari</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-    h1 { font-size: 2.5rem; }
-    p { font-size: 1.2rem; color: #94a3b8; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Satyen | Software Engineer</title>
+  <link rel="stylesheet" href="styles/main.css"/>
 </head>
-<body>
-  <div>
-    <h1>Hi, I'm Satyen 👋</h1>
-    <p>Welcome to my personal website</p>
-    <p>Data | Tech | Growth</p>
+<body data-theme="dark">
+
+<header class="header">
+  <h1>Satyen</h1>
+  <button id="themeToggle">🌗</button>
+</header>
+
+<!-- HERO (STATIC) -->
+<section class="hero">
+  <h2>I build systems with discipline, not just features.</h2>
+  <p>Backend • Data • Distributed Systems</p>
+</section>
+
+<!-- ABOUT (STATIC) -->
+<section class="about">
+  <h3>How I Think</h3>
+  <p>
+    I approach engineering as a system of trade-offs.
+    I value correctness first, then performance, then elegance.
+    I break complex problems into primitives and reason bottom-up.
+  </p>
+</section>
+
+<!-- SKILLS (STATIC, DEEP) -->
+<section class="skills">
+  <h3>Technical Foundation</h3>
+
+  <div class="skill-group">
+    <h4>Languages</h4>
+    <p>Python (backend services, ETL), SQL (analytics & modeling)</p>
   </div>
+
+  <div class="skill-group">
+    <h4>Backend & Systems</h4>
+    <p>REST APIs, Microservices, Kafka-based async systems</p>
+  </div>
+
+  <div class="skill-group">
+    <h4>Cloud & DevOps</h4>
+    <p>AWS (Lambda, S3, Rekognition), Docker, CI/CD</p>
+  </div>
+</section>
+
+<!-- PROJECTS (DYNAMIC) -->
+<section class="projects">
+  <h3>Projects</h3>
+  <div id="projectsContainer"></div>
+</section>
+
+<!-- LEARNING (DYNAMIC) -->
+<section class="learning">
+  <h3>Learning in Public</h3>
+  <div id="learningContainer"></div>
+</section>
+
+<!-- VISION (DYNAMIC) -->
+<section class="vision">
+  <h3>Career Vision</h3>
+  <div id="visionContainer"></div>
+</section>
+
+<footer>
+  <p>GitHub: <a href="https://github.com/satyendc">satyendc</a></p>
+</footer>
+
+<script src="scripts/theme.js"></script>
+<script src="scripts/content.js"></script>
 </body>
 </html>
